@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.menu-open{
+    position: absolute;
+    left: 1.3rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    display: none;
+}
+
+.menu-open.active{
+    display: none;
+}
+
+.menu-close{
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    color: white;
+    z-index: 1;
+}
+.menu-close.active{
+    display: none;
+}
+
+.burguer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    text-align: center;
+    padding: 5rem;
+    background-color: rgba(0, 0, 0, 0.911);
+    transform: translateY(-100%) ;
+    transition: transform .3s ease-out;
+}
+.burguer.show-nav{
+    transform: translateY(0%);
+    transition: transform .3s ease-out;
+    display: none;
+}
+
+.burguer ul li{
+    list-style: none;
+    margin-top: 1.2rem;
+    font-size: 1.7rem;
+}
+
+.burguer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.burguer ul li a:hover{
+    color: white;
+}
+
+.main ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    justify-content: center;
+    
+}
+
+.main ul li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+}
+
+.main ul li a:hover{
+    color: gray;
+}
+
+.content{
+    margin-top: 1.8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.content img{
+    width: 60vw;
+}
+
+.content p{
+    width: 60vw;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    line-height: 150%;
+}
+
+@media only screen and (max-width: 600px){
+  .main{
+    display: none;
+  }
+
+  .menu-open,.menu-close{
+    display: block;
+    cursor: pointer;
+}
+  .burguer.show-nav{
+    display: block;
+  }
+}

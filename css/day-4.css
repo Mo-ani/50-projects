@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: rgb(119,92,240);
+    background-color: linear-gradient(0deg, rgba(119,92,240,1) 0%, rgba(155,135,246,1) 100%);
+    width: 100vw;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+input#visible{
+    height: 50px;
+    width: 0px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 0 10px;
+    transition: width .3s ease-in;
+    border: none;
+    transform: translateX(20px);
+}
+#visible:focus{
+    outline: none;
+}
+#visible.active{
+    width: 200px;
+    transition: width .3s ease-in;
+}
+
+i.icon{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    z-index: 1;
+}
+
+footer{
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    bottom: 3.123rem;
+}

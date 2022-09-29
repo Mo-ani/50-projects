@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#progreso{
+    position: relative;
+    width: 50vw;
+    margin-bottom: 3rem;
+}
+
+#barra-progreso{
+    position: absolute;
+    background-color: lightseagreen;
+    height: 0.313rem;
+    width: 0%;
+    top: 50%;
+    left: 1%;
+    transition: width 0.200s ease-out;
+}
+
+#pasos-progreso{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#pasos-progreso::before{
+    content: "";
+    background-color: lightgray;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    height: 0.313rem;
+    width: 97%;
+    z-index: -1;
+}
+
+#pasos-progreso .paso{
+    
+    border: 3px solid ligthgray;
+    border-radius: 100%;
+    width: 1.8rem;
+    height: 1.7rem;
+    line-height: 1.8rem;
+    text-align: center;
+    background-color: #fff;
+    font-family: 'Muli', sans-serif;
+    font-size: 0.9rem;  
+    position: relative;
+    z-index: 1;
+}
+
+#pasos-progreso .paso.active{
+    background-color: lightseagreen;
+    color: #fff;
+    transition: background-color 0.5s ease-out;
+}
+
+.controles button{
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+}
+
+footer{
+    position: absolute;
+    bottom: 3.123rem;
+}
